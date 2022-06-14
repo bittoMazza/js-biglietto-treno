@@ -21,21 +21,14 @@ else if(isNaN(userAge) == true || (userAge < 0 || userAge > 120))
 else{
     if(userAge < 18)
     {
-        ticketPrice=ticketPrice-((ticketPrice * 20)/100);
-        const saleTicketPrice=ticketPrice.toFixed(2);
-        document.getElementById('ticket-price').innerHTML = 'Il prezzo del biglietto è : €'+ saleTicketPrice;
-        console.log('Il prezzo del biglietto è : €'+ saleTicketPrice)
-    }else if(userAge > 65)
+        ticketPrice=ticketPrice-((ticketPrice * 20)/100);    
+    }
+    else if(userAge > 65)
     {
         ticketPrice=ticketPrice-((ticketPrice * 40)/100);
-        const saleTicketPrice=ticketPrice.toFixed(2);
-        document.getElementById('ticket-price').innerHTML = 'Il prezzo del biglietto è : €'+ saleTicketPrice;
-        console.log('Il prezzo del biglietto è : €'+ saleTicketPrice)
-    }
-    else{
-        ticketPrice = ticketPrice.toFixed(2);
-        document.getElementById('ticket-price').innerHTML = 'Il prezzo del biglietto è : €'+ ticketPrice;
-        console.log('Il prezzo del biglietto è : €'+ ticketPrice)
     }
 }
 
+ticketPrice = ticketPrice.toFixed(2);
+document.getElementById('ticket-price').innerHTML = 'Il prezzo del biglietto è : €'+ ticketPrice;
+console.log('Il prezzo del biglietto è : €'+ ticketPrice)
